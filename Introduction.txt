@@ -1,0 +1,33 @@
+# INTRODUCTION
+--------------
+
+* Why learn about software architecture?
+----------------------------------------
+Writing functional code is just one part of software development. 
+
+To create scalable, maintainable, and efficient applications, you need to understand how all the components work together. 
+
+Application architecture is the foundation for building adaptable systems that can handle future changes and growth. 
+
+By learning how to structure your projects properly, you can avoid performance issues and security vulnerabilities while future-proofing your applications to scale smoothly. 
+
+Good architecture also reduces technical debt, those short-term fixes that can lead to bigger problems later on. 
+
+It provides a clear structure that makes it easier for development teams to collaborate and stay aligned on system goals. 
+
+
+. Scalable
+. Maintainable
+. Efficient applications
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
