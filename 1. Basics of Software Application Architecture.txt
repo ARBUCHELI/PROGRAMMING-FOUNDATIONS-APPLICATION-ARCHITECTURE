@@ -1,0 +1,34 @@
+# 1. Basics of Software Application Architecture
+------------------------------------------------
+
+* What is software application architecture?
+--------------------------------------------
+. We work with code, databases, and user interfaces.
+
+	* Before code is written, software architects design the structure of an application.
+
+. The goal is to create software that is robust, scalable, and easy to maintain.
+
+	* PROGRAMMING LANGUAGES, FRAMEWORKS, AND DATABASE MANAGEMENT SYSTEMS ARE THE FOUNDATIONAL ELEMENTS THAT SUPPORT AND APPLICATION.
+
+	* MODULES WITH DIFFERENT PURPOSES MANAGE USER DATA, PROCESS PAYMENTS, OR HANDLE SECURITY.
+
+	* USER EXPERIENCE ENSURES THAT THE APPLICATION IS NOT ONLY FUNCTIONAL BUT ALSO EASY TO USE, VISUALLY APPEALING, AND ENJOYABLE FOR USERS.
+
+	* BACKGROUND PROCESSES AND SERVICES KEEP THE APPLICATION RUNNING SMOOTHLY.
+
+	* SECURITY MEASURES KEEP OUT UNAUTHORIZED USERS AND PROTECT DATA. (ENCRYPTION, AUTHENTICATION, ETC)
+
+	* MAINTENANCE AND UPDATES FIX BUGS, IMPROVE PERFORMANCE, AND ADD NEW FEATURES.
+
+. Softwre application architecture is the blueprint, foundation, and framework upon which software is built.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+	
+
