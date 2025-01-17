@@ -1,0 +1,26 @@
+# 2. BUILD A SIMPLE SCRIPT APPLICATION
+--------------------------------------
+
+* Components in a simple script application
+-------------------------------------------
+	* TERMINAL
+	----------
+	A text-based interface used to interact with your computer's operating system
+
+
+	* UI
+	----
+	The display of messages on the interface that guides users throught the game
+
+
+	* GAME LOGIC
+	------------
+	Manages the flow of the game, including generating random numbers, processing user input, and determining the outcome of each guess
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	
