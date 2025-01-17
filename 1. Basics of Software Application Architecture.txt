@@ -28,7 +28,131 @@
 
 * Different building blocks in an application
 ---------------------------------------------
+	* SOFTWARE ARCHITECTURE
+	-----------------------
+	The blueprint that guides the overall structure and behavior of the system
 
+
+	* 1. PRESENTATION LAYER
+	-----------------------
+	The face of the application that users iteract with directly. (User interface, UI, Front End, Graphical User Interface, GUI)
+
+	A good UI should be intuitive and user-friendly, making it easy for anyone to use the application witwhout a steep learning curve
+
+
+	* 2. BUSINESS LOGIC LAYER
+	-------------------------
+	Where the core functionality of the application resides
+
+	It's the brain of the application, turning raw data into meaningul outcomes
+
+
+	* 3. DATABASE LAYER
+	-------------------
+	Where the application's information is stored
+
+
+	* 4. SERVICE LAYER
+	------------------
+	A messenger that ensures information flows smoothly between the front and back end
+
+
+	* 5. SECURITY LAYER
+	-------------------
+	Protects data by verifying user identity, granting access rights, and safeguarding data with encryption
+
+
+	* 6. INFRASTRUCTURE LAYER
+	-------------------------
+	Provides the essential resources that keep an application running efficiently
+
+
+	* 7. OBSERVABILITY LAYER
+	------------------------
+	Monitors the application's health and performance in real-time
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* What is front-end vs. back-end development?
+---------------------------------------------
+	* FRONT-END DEVELOPMENT
+	-----------------------
+	Focuses on visual and interactive aspects of a website or app
+		. Layout design
+		. User interactions
+
+
+	* FRONT-END TASKS
+	-----------------
+	. Ensuring designs work across devices
+	. Implementing interactive features
+	. Optimizing performance
+
+
+	* FRONT-END TECHNOLOGIES
+	------------------------
+	. HTML
+	. JavaScript
+	. React
+	. Angular
+	. Vue.js
+
+
+
+
+
+	* BACK-END DEVELOPMENT
+	----------------------
+	Server side functionality
+
+
+	* BACK-END TASKS
+	----------------
+	. Data processing
+	. Database management
+	. Server communication
+
+
+	* BACK-END TECHNOLOGIES
+	-----------------------
+	. Python
+	. Java
+	. Node.js
+	. Django
+	. Spring Boot
+	. Express.js
+	. MySQL
+	. PostgreSQL
+	. MongoDB
+
+
+
+
+
+	UI/UX DESIGNERS FOCUS ON USER EXPERIENCE
+
+	FRONT-END DEVELOPERS SPECIALIZE IN PERFORMANCE OR ACCESSIBILITY
+
+	DEVOPS SPECIALIZE IN DEPLOYMENT AND INFRASTRUCTURE
+
+	DATA ENGINEERS FOCUS ON DATA SYSTEMS
+
+	API DEVELOPERS FOCUS IN INTEGRATION
+
+
+
+		
+
+
+	
+
+
+	
+
+
+
+	
 
 
 
