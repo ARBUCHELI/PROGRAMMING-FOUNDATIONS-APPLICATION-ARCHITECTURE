@@ -94,6 +94,36 @@ if __name__ == "__main__":
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Limitations of a simple script application
+--------------------------------------------
+
+* Simple Scripts
+----------------
+. Designed for small, specific tasks.
+. Code is tightly coupled.
+. Unit testing is harder.
+. Don't support data persistance.
+
+Understanding these limitations is key to understand when to move to more comprehensive application architectures.
+
+
+* Difficult to:
+---------------
+. Handle more users.
+. Larger data sets.
+. More complex workflows.
+
+Spaghetti code.
+
+Scaling a script to meet these demands, typically requires refactoring the code, into a more modular, organized structure, often evolving into a multi-file or even multi-module application.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
