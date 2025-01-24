@@ -1,0 +1,119 @@
+# 3. BUILD A FULL-STACK APPLICATION
+-----------------------------------
+
+* Components in a full-stack application
+----------------------------------------
+
+	* FRONT-END (CLIENT-SIDE)
+	-------------------------
+	. Handles the user interface and what the user interacts with
+
+
+	* BACK-END (SERVER SIDE)
+	------------------------
+	. Processes user inputs, performs computations, and sends results back to the client
+
+
+	COMMUNICATION BETWEEN FRONT-END AND BACK-END TYPICALLY HAPPENS OVER HTTP
+
+
+	THE FRONTEND SENDS REQUESTS TO THE BACKEND USING API ENDPOINTS
+
+		API ENDPONTS
+		------------
+		. Retrieving data
+		. Saving new information
+		. Updating existing records
+
+
+	* TO-DO LIST APPLICATION
+	------------------------
+	Front-End				Back-End
+	---------				--------
+	. HTML					. Node.js
+	. CSS					. API endpoints
+	. JavaScript
+
+
+	* NODEJS
+	--------
+	JAVASCRIPT RUNTIME THAT ENABLES
+	-------------------------------
+	. Server side JavaScript execution
+
+	* EXPRESS
+	---------
+	. A framework that sits on top of NodeJS and simplifies handling HTTP requests and responses
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
