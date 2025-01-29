@@ -181,6 +181,26 @@ app.listen(port, () => {
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Limitations of a local full-stack application
+-----------------------------------------------
+	* LIMITATIONS OF LOCALLY-RUNNING APPLICATIONS
+	---------------------------------------------
+		. Accessibility
+
+		. Resources of the Machine
+
+		. Security concerns
+
+			Local machines are often less secure than dedicated servers, lacking enterprise-level security measures such as firewalls, encryption, and intrusion detection
+			systems.
+
+		. Vulnerable to data loss
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
