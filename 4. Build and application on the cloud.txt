@@ -1,0 +1,40 @@
+# 4. BUILD AN APPLICATION ON THE CLOUD
+--------------------------------------
+
+* Components in a cloud application
+-----------------------------------
+	Traditionally --> On-premise servers
+
+
+	* INFRASTRUCTURE
+	----------------
+	The foundational physical and virtual resources that support the operation of an application.
+
+
+	* AWS, AZURE, GCP
+	-----------------
+
+		* COMPUTE SERVICES
+		------------------
+		Provide the processing power needed to run applications and perform tasks.
+
+		They offer virtual machines that act like flexible, adjustable computers, and serverless functions, that let you run code without managing the server that is running it.
+
+
+		* SERVICES
+		----------
+			. Compute Services
+			. Storage and database services
+			. Networking services
+			. Securitiy and identity services
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+		
+			
+
+	
+
+	
