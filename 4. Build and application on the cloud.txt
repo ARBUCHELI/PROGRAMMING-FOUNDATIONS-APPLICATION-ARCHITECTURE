@@ -31,6 +31,110 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Use recipe cloud-based application
+------------------------------------
+
+	* In the example we have static files hosted in Amazon S3
+
+	* Our backend processes the data and communicates with the database
+
+
+. AWS Lambda
+------------
+. Serverless computing service
+	
+	Allow us to run the application code in a serverless environment
+
+	. Serverless environment
+	------------------------
+	This means, we don't need to worry about managing servers, AWS automatically scales the back end to handle any number of requests
+
+
+. AWS API Gateway
+-----------------
+Connects our frontend to our lambda functions.  It's reponsible for accepting, routing, and processing API requests to the appropiate backend services, and then returning the corresponding
+responses
+
+. Connects front-end to AWS Lambda
+
+. Sets up API routes
+
+. Sends API requests to appropriate back-end service
+
+. Returns corresponding response to the front-end
+
+
+. AWS DynamoDB
+--------------
+. Fully managed NoSQL database service
+
+. High availability
+
+. Scalable
+
+
+When a user submits a new recipe, the data is sent from the front end to the API gateway, which routes the request to a lambda function. 
+
+This lambda function processes the incoming data and interacts with DynamoDB to store the recipe. 
+
+Once the data is saved in DynamoDB, the lambda function responds back to the API gateway, which then sends a confirmation response to the front end. 
+
+The front end updates the recipe list to include the newly added recipe. And this entire process happens seamlessly in the background. 
+
+
+
+			RECIPE APP				API GATEWAY				LAMBDA				DYNAMO DB
+			  	   ---------------------------->	   ---------------------------->      ------------------------->
+				   <----------------------------	   <----------------------------      <-------------------------
+
+
+
+		BECAUSE THE APPLICATION OF OUR EXAMPLE IS BUILD USING SERVERLESS ARCHITECTURE, IT CAN SCALE EFFORTLESSLY
+
+		AWS AUTOMATICALLY HANDLESS THE NECESSARY RESOURCES TO KEEP THE APPLICATION RUNNING SMOOTHLY WITHOUT ANY MANUAL INTERVENTION
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		
 			
