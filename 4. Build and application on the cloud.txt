@@ -96,6 +96,145 @@ The front end updates the recipe list to include the newly added recipe. And thi
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Code walkthrough: Recipe cloud-based application
+--------------------------------------------------
+. Frontend hosted in Amazon S3
+
+script.js
+---------
+const apiUrl = 'https://cnehco6paj.execute-api.us-east-1.amazonaws.com/prod/recipes'; 
+
+// Submit Recipe
+document.getElementById('recipe-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const recipeName = document.getElementById('recipe-name').value;
+    const ingredients = document.getElementById('recipe-ingredients').value;
+    const instructions = document.getElementById('recipe-instructions').value;
+
+    fetch(apiUrl, {
+        method: 'POST',
+        body: JSON.stringify({ recipeName, ingredients, instructions }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.message);
+        loadRecipes();
+    })
+    .catch(error => console.error('Error:', error));
+
+    // Clear the form
+    document.getElementById('recipe-form').reset();
+});
+
+// Load Recipes
+function loadRecipes() {
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        const recipeList = document.getElementById('recipe-list');
+        recipeList.innerHTML = '';
+
+        recipes = JSON.parse(data.body);
+        recipes.forEach(function(recipe) {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${recipe.recipeName.S}</strong><br>
+                            Ingredients: ${recipe.ingredients.S}<br>
+                            Instructions: ${recipe.instructions.S}`;
+            recipeList.appendChild(li);
+        });
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+// Load recipes on page load
+loadRecipes()
+
+
+. In the code we call two APIs, one for submitting new recipes, and another for loading our recipes.
+
+. The GET, and POST endpoints are configured with AWS API gateway to connect the frontend with the backend.
+
+. API gateay handles incoming HTTP requests and routes them to the appropriate lambda function. 
+
+
+* Lambda Functions
+------------------
+
+. GetRecipesFunction ---> QUERIES DYNAMODB WHICH STORES THE RECIPES DATA.  RETRIEVES AS JSON
+--------------------
+import { DynamoDBClient, ScanCommand } from "@aws-sdk/client-dynamodb";
+
+const client = new DynamoDBClient({ region: "us-east-1" });
+
+export const handler = async (event) => {
+    const params = {
+        TableName: 'recipes'
+    };
+
+    try {
+        const command = new ScanCommand(params);
+        const data = await client.send(command);
+        return {
+            statusCode: 200,
+            body: JSON.stringify(data.Items)
+        };
+    } catch (err) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: 'Could not retrieve recipes', details: err.message })
+        };
+    }
+};
+
+
+. SaveRecipeFunction ---> HANDLES DE SUBMISION OF NEW RECIPES.  
+--------------------
+
+import { DynamoDBClient, PutItemCommand, ScanCommand } from "@aws-sdk/client-dynamodb";
+
+const client = new DynamoDBClient({ region: "us-east-1" });
+
+export const handler = async (event) => {
+    const { recipeName, ingredients, instructions } = event;
+    console.log("Saving new recipe: \n" + recipeName + "\n" + ingredients + "\n" + instructions + "\n")
+    const recipeId = "recipe_" + Math.random().toString(36).substr(2, 9);
+
+    const params = {
+        TableName: 'recipes',
+        Item: {
+            recipeId: { S: recipeId },
+            recipeName: { S: recipeName },
+            ingredients: { S: ingredients },
+            instructions: { S: instructions }
+        }
+    };
+
+    try {
+        const data = await client.send(new PutItemCommand(params));
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: 'Recipe saved successfully!' })
+        };
+    } catch (err) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: 'Could not save recipe', details: err.message })
+        };
+    }
+};
+
+
+* WE ALSO HAVE OPTIONS OF USING LOGS FOR TROUBLESHOOTING AND QUICKLY IDENTIFY ERRORS.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
